@@ -1,10 +1,9 @@
-#Take user input or-
-# S=["D,D,U,U,U,U,D,D"]
-S= [str(x) for x in input("Please input Gary's Path:").split()] 
+#Takes user input -
+S= [str(x) for x in input("Please input Gary's Path or Steps:").split()] 
 count=0
 
-d=0
-u=0
+d=0 #d-Downhill
+u=0 #u-Uphill
 if S[0]=="D":
     d+=1
 elif S[0]=="U":
@@ -19,4 +18,4 @@ for i in range(1,len(S)-1):
     if d-u == 0 and S[i+1] == "U":
         count +=1
 
-print(count)            
+print("Gary's number of valleys are :",count)            
